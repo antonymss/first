@@ -98,16 +98,45 @@ function App() {
     fetchData();
   },[]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.jsx</code> and save to reload. h1
-        </p>
-
-        111
-      </header>
-    </div>
+    <>
+    <h3>Users</h3>
+     <div className="container">
+       <div className="half">
+         <h4>Old info user</h4>
+         <ol>
+           {oldUsers.map((user) => (
+             <li>
+               <div>
+                 <p>
+                   {user.name}, {user.age}
+                 </p>
+                 <p>
+                   Address: {user.address.city}, {user.address.street}
+                 </p>
+               </div>
+             </li>
+           ))}
+         </ol>
+       </div>
+       <div className="half">
+         <h4> New info </h4>
+         <ol>
+           {users.map((user) => (
+             <li>
+               <div>
+                 <p>
+                   {user.name}, {user.age}
+                 </p>
+                 <p>
+                   Address: {user.address.city}, {user.address.street}
+                 </p>
+               </div>
+             </li>
+           ))}
+         </ol>
+       </div>
+     </div>
+   </>
   );
 }
 
