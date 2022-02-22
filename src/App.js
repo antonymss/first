@@ -5,7 +5,7 @@ import React from "react"
 const fetchUsers = () =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
-      const isSuccessed = Math.random() > 0.1; 
+      const isSuccessed = Math.random() ; 
       if (isSuccessed) {
         resolve([
           {
@@ -42,7 +42,7 @@ const fetchUsers = () =>
 const fetchNewUserInfo = () =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
-      const isSuccessed = Math.random() > 0.1;
+      const isSuccessed = Math.random() ;
       if (isSuccessed) {
         resolve([
           {
